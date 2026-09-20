@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-100 antialiased font-sans selection:bg-cyan-500 selection:text-slate-950;
+    background-color: #030712;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.06) 0px, transparent 45%),
+      radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.05) 0px, transparent 45%),
+      radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.04) 0px, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+/* Custom DPI Government & Decision Intelligence Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* High-tech DPI Decision Canvas & Intelligence Utilities */
+.dpi-card {
+  background: #0b1329;
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.35);
+}
+
+.dpi-card-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dpi-card-hover:hover {
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 12px 35px -5px rgba(6, 182, 212, 0.15);
+  transform: translateY(-2px);
+}
+
+.dpi-telemetry-strip {
+  background: #070d1e;
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+}
+
+/* Signature "The Voice Signal" Pulse Indicator */
+@keyframes voice-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(34, 211, 238, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0);
+  }
+}
+
+.voice-signal-node {
+  animation: voice-pulse 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* High-Contrast Data Figure Numbers */
+.metric-value {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  letter-spacing: -0.03em;
+}
+
+/* Leaflet Map custom styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: 10;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0.875rem;
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.5) !important;
+  padding: 0;
+  overflow: hidden;
+}
+
+.leaflet-popup-tip {
+  background: #0f172a !important;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  line-height: 1.4;
+}
