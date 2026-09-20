@@ -21,7 +21,12 @@ import {
   SeasonalDemandRisk
 } from '../types';
 
-const API_BASE = '/api';
+const metaEnv = (import.meta as unknown as { env?: { VITE_API_URL?: string } }).env;
+const API_BASE = metaEnv?.VITE_API_URL
+  ? `${metaEnv.VITE_API_URL.replace(/\/$/, '')}/api`
+  : (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1')
+    ? 'https://janniti-lviv.onrender.com/api'
+    : '/api';
 
 export interface AnalysisResponse {
   aiAnalysis: {
