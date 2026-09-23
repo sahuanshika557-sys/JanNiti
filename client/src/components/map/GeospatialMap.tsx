@@ -129,10 +129,10 @@ export const GeospatialMap: React.FC<GeospatialMapProps> = ({
       >
         <MapController center={mapCenter} zoom={zoomLevel} />
         
-        {/* CartoDB Positron / OSM clean tile style */}
+        {/* High-contrast clean OpenStreetMap tile layer (100% free, zero watermarks) */}
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
         {/* Hotspot Circles */}
